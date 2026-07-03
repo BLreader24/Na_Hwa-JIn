@@ -194,7 +194,7 @@ with st.form("triage_form"):
     </div>
     """, unsafe_allow_html=True)
 
-    age, gender = st.calumns(2)
+    age, gender = st.columns(2)
     with age:
         age_value = st.number_input("Age", min_value=1, max_value = 120, value = 8)
     with gender:
