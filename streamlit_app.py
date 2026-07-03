@@ -229,7 +229,7 @@ if submitted:
 
     pred = model.predict(patient_copy[features])[0]
     proba = model.predict_proba(patient_copy[features])[0]
-    debt_name = dept_map_inv[pred]
+    dept_name = dept_map_inv[pred]
     confidence = proba[pred] * 100
     info = DEPT_INFO[dept_name]
 
