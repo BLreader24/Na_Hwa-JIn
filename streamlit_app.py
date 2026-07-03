@@ -32,4 +32,4 @@ div[data-testid="stCheckbox"] label {
     font-size: 14px !important; font-weight: 500 !important; color: #374151 !important;
 }
 </style>
-""",unsave_allow_html=True)
+""",unsafe_allow_html=True)
