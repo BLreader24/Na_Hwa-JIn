@@ -228,7 +228,7 @@ if submitted:
     patient_copy[cols_to_scale]= scaler.transform(patient[cols_to_scale])
 
     pred = model.predict(patient_copy[features])[0]
-    preba = model.predict_proba(patient_copy[features])[0]
+    proba = model.predict_proba(patient_copy[features])[0]
     debt_name = dept_map_inv[pred]
     confidence = proba[pred] * 100
     info = DEPT_INFO[dept_name]
