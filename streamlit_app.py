@@ -167,3 +167,38 @@ with st.form("triage_form"):
     with hr:
         hr_level = st.selectbox("Heart Rate", options=list(hr_map.keys()),index=1)
 
+    st.markdown("""
+    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;
+                padding:20px 24px;margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+            <span style="background:#059669;color:white;border-radius:8px;
+                         padding:4px 10px;font-size:12px;font-weight:600;">4</span>
+            <span style="font-size:16px;font-weight:600;color:#064e3b;">Do you have any of the following?</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    ch1, ch2, ch3, _ = st.columns(4)
+    with ch1: hypertension  = st.checkbox("🩺 High Blood Pressure")
+    with ch2: heart_disease = st.checkbox("❤️ Heart Disease")
+    with ch3: asthma        = st.checkbox("💨 Asthma")
+
+    st.markdown("""
+    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;
+                padding:20px 24px;margin-bottom:24px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+            <span style="background:#475569;color:white;border-radius:8px;
+                         padding:4px 10px;font-size:12px;font-weight:600;">5</span>
+            <span style="font-size:16px;font-weight:600;color:#1e293b;">Patient Information</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    age, gender = st.calumns(2)
+    with age:
+        age_value = st.number_input("Age", min_value=1 max_value = 120, value = 8)
+    with gender:
+        gen = st.selectbox("Gender", options=['Male','Female'])
+
+    submitted = st.form_sumbit_button("Get AI Recommendation!")
+
