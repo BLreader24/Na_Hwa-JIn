@@ -132,7 +132,7 @@ with st.form("triage_form"):
         nausea_vomiting  = st.checkbox("🤮  Nausea / Vomiting")
         dizziness        = st.checkbox("😵  Dizziness")
 
-    st.markdown("<br>", unsafe_allow_hmtl=True)
+    
     st.markdown("""
     <div style="background:#fdf4ff;border:1px solid #e9d5ff;border-radius:14px;
                 padding:20px 24px;margin-bottom:20px;">
