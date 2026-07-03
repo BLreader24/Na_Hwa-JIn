@@ -200,5 +200,5 @@ with st.form("triage_form"):
     with gender:
         gen = st.selectbox("Gender", options=['Male','Female'])
 
-    submitted = st.form_sumbit_button("Get AI Recommendation!")
+    submitted = st.form_submit_button("Get AI Recommendation!")
 
